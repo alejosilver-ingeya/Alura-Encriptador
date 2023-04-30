@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cifrador</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Encriptador</h1>
+    </header>
+
+    <section class="principal">
+      <div class="cajas">
+        <label for="texto">Ingrese el texto:</label>
+        <div>
+          <textarea id="texto" rows="10" cols="50" placeholder="Texto"></textarea>
+          <img src="escribir.png" alt="Escribir texto">
+        </div>
+      </div>
+
+      <div class="cajas">
+        <input type="radio" id="cifrar" name="accion" value="cifrar" checked />
+        <label for="cifrar">Cifrar</label>
+        <input type="radio" id="descifrar" name="accion" value="descifrar" />
+        <label for="descifrar">Descifrar</label>
+      </div>
+
+      <div class="cajas">
+        <button type="button" onclick="procesar()">Procesar</button>
+        <button type="button" onclick="limpiar()">Limpiar</button>
+        <button type="button" onclick="copiar()">Copiar resultado</button>
+      </div>
+
+      <div class="cajas">
+        <label for="resultado">Resultado:</label>
+        <div>
+          <textarea id="resultado" rows="10" cols="50" readonly></textarea>
+        </div>
+      </div>
+
+      <div id="procesando">
+        <div class="spinner"></div>
+        <p>Procesando...</p>
+      </div>
+    </section>
+
+    <script src="cifrador.js"></script>
+  </body>
+</html>
